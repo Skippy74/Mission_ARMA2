@@ -10,6 +10,8 @@ private ["_i", "_j", "_c", "_pos_mk_spawnHunter", "_spawnHunter", "_mk_spawnAlie
 
 _spawnHunter = ["mk_spHunt1", "mk_spHunt2", "mk_spHunt3", "mk_spHunt4", "mk_spHunt5", "mk_spHunt6", "mk_spHunt7", "mk_spHunt8", "mk_spHunt9", "mk_spHunt10", "mk_spHunt11"];
 
+
+//pas propre du tout
 _i = floor(random(11) + 1);
 _pos_mk_spawnHunter = getMarkerPos (_spawnHunter select _i);
 _spawnHunter = _spawnHunter - [_spawnHunter select _i];
@@ -52,6 +54,8 @@ if(isServer or isDedicated) then
 	alien1 setPosATL _pos_mk_spawnAlien1;
 };
 
+
+//fonction pour changer le joueur de camp une fois mort... to be continued
 while {true} do
 {
 	if ((local player) && (!alive player) && (playerSide == east)) then
